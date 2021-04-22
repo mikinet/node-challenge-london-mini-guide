@@ -1,3 +1,37 @@
 .App {
   text-align: center;
 }
+
+table{
+  width:90vw;
+  margin:auto;
+}
+
+thead{
+  background-color: #000000;
+  color:#ffffff;
+}
+
+tr:first-of-type th{
+  padding:0.5rem;
+}
+
+tr th:first-child{
+  width:3%;
+}
+
+tr th:nth-child(2){
+  width:30%;
+}
+
+tr th:nth-child(3){
+  width:15%;
+}
+
+tr th:nth-child(4){
+  width:20%;
+}
+
+tr:nth-child(even){
+  background-color:rgb(106, 106, 161) ;
+}
