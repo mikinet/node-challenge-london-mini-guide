@@ -1,37 +1,115 @@
 .App {
+  margin: auto;
+  width: 90%;
+}
+
+table,
+div {
+  width: 100%;
+}
+
+/* Header Styles */
+.header {
   text-align: center;
+  margin: 2rem auto 5rem;
+  font-size: 3rem;
 }
 
-table{
-  width:90vw;
-  margin:auto;
+/* Form Control Styles */
+
+div.selector,
+div.buttons-group {
+  text-align: left;
+  margin: 0 0 3rem;
 }
 
-thead{
+div.selector label,
+div.selector select,
+div.buttons-group button {
+  padding: 0.5em;
+  font-size: 1.2rem;
+}
+
+div.selector label {
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+div.selector select {
+  border-radius: 0.3rem;
+}
+
+div.buttons-group {
+  display: flex;
+  justify-content: space-around;
+}
+
+div.buttons-group button {
+  background-color: rgb(245, 245, 239);
+  border-radius: 0.3rem;
+}
+
+div.buttons-group button.selected {
+  background-color: dodgerblue;
+}
+
+/* Table Styles */
+table {
+  border-spacing: 0;
+}
+
+thead {
+  text-align: left;
   background-color: #000000;
-  color:#ffffff;
+  font-size: 1.2rem;
+  color: #ffffff;
 }
 
-tr:first-of-type th{
-  padding:0.5rem;
+th,
+td {
+  padding: 1rem 0.5rem;
 }
 
-tr th:first-child{
-  width:3%;
+tr td:first-child,
+th:first-child {
+  width: 3%;
 }
 
-tr th:nth-child(2){
-  width:30%;
+tr td:first-child {
+  font-weight: 500;
 }
 
-tr th:nth-child(3){
-  width:15%;
+tr th:nth-child(2) {
+  width: 30%;
 }
 
-tr th:nth-child(4){
-  width:20%;
+tr th:nth-child(3) {
+  width: 18%;
 }
 
-tr:nth-child(even){
-  background-color:rgb(106, 106, 161) ;
+tr th:nth-child(4) {
+  width: 24%;
+}
+
+tr:nth-child(even) {
+  background-color: rgb(245, 245, 239);
+}
+
+/* Error div Styles */
+div.error {
+  text-align: center;
+  padding: 0.5em 0;
+  font-size: 1rem;
+  font-weight: 500;
+  color: rgb(187, 38, 38);
+  background-color: rgb(245, 193, 192);
+}
+
+/* Message div Styles */
+div.message {
+  padding: 0.5rem 0 1.5rem;
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 600;
+  background-color: rgb(228, 228, 220);
 }
