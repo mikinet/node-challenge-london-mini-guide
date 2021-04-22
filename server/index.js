@@ -3,12 +3,13 @@ const express = require("express");
 const app = express();
 
 const PORT = process.env.PORT || 5000;
-
+const ORIGIN = "http://localhost:3000";
 app.listen(PORT, () => console.log(`Your app is running on port ${PORT}.`));
 
 /************* LEVEL 100 ***************/
 // route "/"
 app.get("/", (req, res) => {
+  res.header({ "Access-Control-Allow-Origin": ORIGIN });
   res.json({
     "/colleges": "retruns an array of colleges in a specific area",
     "/hospitals": "retruns an array of hospitals in a specific area",
@@ -27,7 +28,7 @@ app.get("/:city/:department", (req, res) => {
   const city = req.params.city.toLowerCase(); // city = case-insensitive name of a burrough in London
   const department = req.params.department.toLowerCase(); // department = case-insensitive name of a department
   let cityData = [];
-  res.header({"Access-Control-Allow-Origin":"*"});
+  res.header({"Access-Control-Allow-Origin":ORIGIN});
   switch (city) {
     case "harrow":
       cityData = HARROW;
